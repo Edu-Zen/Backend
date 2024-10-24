@@ -6,8 +6,7 @@ const bcrypt = require("bcrypt");
 const sendEmail = require("../utils/sendEmail");
 
 const cloudinary = require('cloudinary').v2;
-// const multer = require('multer');
-// const { CloudinaryStorage } = require('multer-storage-cloudinary');
+
 require('dotenv').config();
 // Function to generate a 6-digit verification code
 function generateVerificationCode() {
