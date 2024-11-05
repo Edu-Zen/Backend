@@ -6,8 +6,8 @@ module.exports = () => {
         useUnifiedTopology: true,
     };
     try {
-        console.log("Mongo URI:", 'mongodb+srv://rinezkhouloud:k20101049@cluster0.kcykgao.mongodb.net/eduzen?retryWrites=true&w=majority&appName=Cluster0'); // Add this line
-        mongoose.connect('mongodb+srv://rinezkhouloud:k20101049@cluster0.kcykgao.mongodb.net/eduzen?retryWrites=true&w=majority&appName=Cluster0', connectionParams)
+        console.log("Mongo URI:", process.env.MONGO_URI); // Add this line
+        mongoose.connect(process.env.MONGO_URI, connectionParams)
             .then(() => {
                 console.log("Connected to database successfully");
             })
