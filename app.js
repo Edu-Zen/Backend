@@ -19,5 +19,10 @@ app.use(bodyParser.json());
 app.use("/api/auth", auth);
 app.use("/api/students", students);
 app.use("/api/alls", alls);
+
+
+
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

@@ -6,7 +6,7 @@ module.exports = () => {
         useUnifiedTopology: true,
     };
     try {
-        console.log("Mongo URI:", process.env.MONGO_URI); // Add this line
+        console.log("MongoDB URI:", mongoUri ? "URI Found" : "URI Not Found");
         mongoose.connect(process.env.MONGO_URI, connectionParams)
             .then(() => {
                 console.log("Connected to database successfully");

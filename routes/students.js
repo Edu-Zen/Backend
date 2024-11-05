@@ -84,12 +84,16 @@ router.get("/email/:email", async (req, res) => {
 
 // Get all students
 router.get("/", async (req, res) => {
+  console.log("Received request for /api/students");
   try {
+    
     const students = await Student.find();
     res.status(200).json(students);
+   
   } catch (err) {
     res.status(500).send("Server error");
   }
+ 
 });
 
 // Update a student by Email
