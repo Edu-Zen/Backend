@@ -20,6 +20,17 @@ app.get('/', (req, res) => {
     res.send("Welcome to the API. Try accessing /api/students for data.");
 });
 
+app.get('/health', (req, res) => {
+    res.status(200).send("Server is healthy");
+});
+
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+
+
+
 app.use("/api/auth", auth);
 app.use("/api/students", students);
 app.use("/api/alls", alls);
