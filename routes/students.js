@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Student, validate } = require("../models/student");
 // const Token = require("../models/token");
 
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const sendEmail = require("../utils/sendEmail");
 
 const cloudinary = require('cloudinary').v2;
