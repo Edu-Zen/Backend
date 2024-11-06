@@ -16,10 +16,13 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 // Routes
+app.get('/', (req, res) => {
+    res.send("Welcome to the API. Try accessing /api/students for data.");
+});
+
 app.use("/api/auth", auth);
 app.use("/api/students", students);
 app.use("/api/alls", alls);
-
 
 
 

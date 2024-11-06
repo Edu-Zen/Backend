@@ -96,6 +96,8 @@ router.get("/", async (req, res) => {
  
 });
 
+
+
 // Update a student by Email
 
 router.post("/update/:email", async (req, res) => {
